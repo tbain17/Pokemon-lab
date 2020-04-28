@@ -23,9 +23,7 @@ body {
   border-radius: 10px;
 }
 
-.pokemon-card img {
-  margin-left: 50px
-}
+
 
  .pokemon-card h2 {
    font-family: cursive;
@@ -37,13 +35,12 @@ body {
    border: 2px lightblue solid;
  }
 
- .pokemon-card h3 {
-   font-variant: small-caps;
-   text-align: center;
- }
-
  .pokemon-card .types {
    border: 2px solid red;
    border-radius: 5px;
    background-color: skyblue;
+   padding: 15px;
+   list-style: none;
+   text-align: center;
+   font-variant: small-caps;
  }
