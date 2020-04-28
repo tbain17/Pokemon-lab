@@ -32,6 +32,7 @@ class PokemonContainer extends Component {
     return (
       <div className="pokemon-container">
         <h2>Pokemon!</h2>
+        <h3>Choose a Pokemon</h3>
         <PokemonSelector
           pokemons={this.state.pokemons}
           onPokemonSelected={this.handlePokemonSelected}
