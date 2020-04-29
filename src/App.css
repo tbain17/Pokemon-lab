@@ -14,16 +14,14 @@ body {
 
 .pokemon-card {
   border: 2px solid red;
+  border-radius: 10px;
   width: 200px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
   background-color: yellow;
   margin: 20px;
-  border-radius: 10px;
 }
-
-
 
  .pokemon-card h2 {
    font-family: cursive;
@@ -38,9 +36,68 @@ body {
  .pokemon-card .types {
    border: 2px solid red;
    border-radius: 5px;
-   background-color: skyblue;
+   background-color: white;
    padding: 15px;
    list-style: none;
    text-align: center;
    font-variant: small-caps;
+ }
+ .pokemon-card .grass {
+   color:green;
+ }
+ .pokemon-card .poison {
+   color:purple;
+ }
+ .pokemon-card .flying {
+   color:skyblue;
+ }
+ .pokemon-card .dark {
+   color:black;
+ }
+ .pokemon-card .ghost {
+   color:violet;
+ }
+ .pokemon-card .bug {
+   color:darkgreen;
+ }
+ .pokemon-card .water {
+   color:blue;
+ }
+ .pokemon-card .fire {
+   color:red;
+ }
+ .pokemon-card .dragon {
+   color:darkblue;
+ }
+ .pokemon-card .fairy {
+   color:pink;
+ }
+ .pokemon-card .normal {
+   color:grey;
+ }
+ .pokemon-card .fighting {
+   color:darkred;
+ }
+ .pokemon-card .psychic {
+   color:pink;
+ }
+
+ #fav{
+   border: 3px solid orange;
+   border-radius: 10px;
+   width: 200px;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-bottom: 20px;
+   background-color: lightgreen;
+ }
+
+ #fav h2 {
+   font-family: cursive;
+   font-variant: small-caps;
+   background-color: darkgreen;
+   color: white;
+   text-align: center;
+   border-radius: 5px;
+   border: 2px lightblue solid;
  }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PokemonSelector from '../components/PokemonSelector';
 import PokemonDetail from '../components/PokemonDetail';
+import PokemonFavs from '../components/PokemonFavs';
 
 class PokemonContainer extends Component {
   constructor(props) {
@@ -8,9 +9,11 @@ class PokemonContainer extends Component {
 
     this.state = {
       pokemons: [],
-      selectedPokemonDetails: null
+      selectedPokemonDetails: null,
+      favourites: []
     };
     this.handlePokemonSelected = this.handlePokemonSelected.bind(this);
+    this.addToFavs = this.addToFavs.bind(this);
   }
 
   componentDidMount(){
@@ -28,6 +31,14 @@ class PokemonContainer extends Component {
     .catch(err => console.error)
   }
 
+  addToFavs(favourite) {
+    this.setState((prevState) => {
+        return {
+          favourites: [...prevState.favourites, favourite]
+      };
+    });
+  }
+
   render(){
     return (
       <div className="pokemon-container">
@@ -37,9 +48,12 @@ class PokemonContainer extends Component {
           pokemons={this.state.pokemons}
           onPokemonSelected={this.handlePokemonSelected}
         />
-        <PokemonDetail pokemon={this.state.selectedPokemonDetails}/>
-
-
+        <PokemonDetail pokemon={this.state.selectedPokemonDetails}
+        onPokemonFavourited={this.addToFavs}
+        />
+        <h3>Favourites</h3>
+        <PokemonFavs favs={this.state.favourites}
+        />
       </div>
     );
   }
